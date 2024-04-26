@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    right: 2rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Semi-transparent black border */
+    border-left: 1px solid rgba(0, 0, 0, 0.2); /* Semi-transparent black border */
+}
