@@ -24,6 +24,9 @@ import userRouter from './routes/user.routes.js'
 import listRouter from './routes/list.routes.js'
 import taskRouter from './routes/task.routes.js'
 
+app.get('/',(req,res)=>{
+    res.json('hello')
+})
 // routes declaration
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/lists",listRouter)
