@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 // import Logo from '../assets/logo';
 import UserContext from '../context/UserContext';
 import List from '../components/List';
-import Loader from '../components/Loader';
 
 const Home = () => {
   const { user } = useContext(UserContext);

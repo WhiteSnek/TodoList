@@ -36,15 +36,12 @@ const Login = () => {
         }
       );
       const userInfo = user.data.data.user;
-      console.log(userInfo);
-      console.log(user.data.message);
       setUser(userInfo);
       navigate("/");
     } catch (error) {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const togglePasswordVisibility = () => {

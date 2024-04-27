@@ -25,7 +25,7 @@ const Header = () => {
                                 </Link>
                         )}
                         {user && (
-                                <button onClick={() => setDropDown(!dropDown)}><img src={user.avatar} alt='avatar' className='h-10 w-10 rounded-full '/></button>
+                                <button onClick={() => setDropDown(!dropDown)}><img src={user.avatar} alt='avatar' className='h-10 w-10 rounded-full object-cover'/></button>
                             
                         )}
                     </div>

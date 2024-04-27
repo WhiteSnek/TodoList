@@ -25,7 +25,6 @@ const List = () => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const [title, setTitle] = useState("");
@@ -42,7 +41,6 @@ const List = () => {
           withCredentials: true,
         }
       );
-      console.log(add);
       getLists();
       setTitle('');
       setDescription('');
@@ -50,23 +48,19 @@ const List = () => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
 
   const deleteList = async (listId) => {
     try{
-      console.log(listId)
       const deletedList = await axios.delete(`/lists/${listId}`,{
           withCredentials: true
       })
-      console.log(deletedList)
       getLists()
   } catch (error) {
       const errorMessage = error.response.data.match(
           /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
   }
   }
 
@@ -80,7 +74,6 @@ const List = () => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
     )[1];
-    console.log(errorMessage);
     }
   }
 

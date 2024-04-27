@@ -21,7 +21,6 @@ const Dropdown = ({ setDropDown }) => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
 

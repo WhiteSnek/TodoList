@@ -23,7 +23,6 @@ const Task = ({ listId }) => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const deleteTask = async (taskId) => {
@@ -31,13 +30,11 @@ const Task = ({ listId }) => {
       const deleteTask = await axios.delete(`/tasks/task/${taskId}`, {
         withCredentials: true,
       });
-      console.log(deleteTask);
       getTasks();
     } catch (error) {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   
@@ -52,14 +49,12 @@ const Task = ({ listId }) => {
           withCredentials: true,
         }
       );
-      console.log(add);
       getTasks();
       setTitle("");
     } catch (error) {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const toggleStatus = async (taskId) => {
@@ -74,7 +69,6 @@ const Task = ({ listId }) => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const updateTask = async (taskId) => {
@@ -84,13 +78,11 @@ const Task = ({ listId }) => {
         { title },
         { withCredentials: true }
       );
-      console.log(updated.data.data.title);
       getTasks();
     } catch (error) {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
     }
   };
   const changeEditState = (taskId) => {

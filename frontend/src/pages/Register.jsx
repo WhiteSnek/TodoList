@@ -55,14 +55,12 @@ const Register = () => {
         withCredentials: true,
       });
       const userInfo = user.data.data.user;
-      console.log(userInfo)
       setUser(userInfo);
       
     } catch (error) {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
-      console.log(errorMessage);
       setError(errorMessage)
     }
   };
