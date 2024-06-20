@@ -42,6 +42,7 @@ const Login = () => {
       const errorMessage = error.response.data.match(
         /<pre>Error: (.*?)<br>/
       )[1];
+      setError(errorMessage)
       console.log(errorMessage)
     }
   };

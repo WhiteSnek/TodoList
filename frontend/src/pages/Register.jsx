@@ -108,7 +108,7 @@ const Register = () => {
               type={show ? "text" : "password"}
               placeholder="Enter Password"
               defaultValue={details.password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setDetails({ ...details, password: e.target.value })}
             />
             <button type="button" className="absolute top-0 right-0 p-2" onClick={togglePasswordVisibility}>
               {show ?  <IconContext.Provider value={{  size: "27px" }}>

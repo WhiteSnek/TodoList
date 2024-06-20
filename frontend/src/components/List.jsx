@@ -94,9 +94,9 @@ const List = () => {
             <div className="flex justify-center gap-4 items-center">
             {/* */}
             <Popup contentStyle={{width: "30%",borderRadius: '10px'}} trigger=
-                { <button className="rounded-full hover:bg-red-800 w-8 h-8 flex justify-center items-center"><IconContext.Provider value={{ color: "white", size: "20px" }}>
-                <FaPencil />
-              </IconContext.Provider></button>} 
+                  { <button className="rounded-full hover:bg-red-800 w-8 h-8 flex justify-center items-center"><IconContext.Provider value={{ color: "white", size: "20px" }}>
+                  <FaPencil />
+                </IconContext.Provider></button>} 
                 modal nested>
                 {
                     close => (
