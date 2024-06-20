@@ -20,9 +20,9 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 // routes import 
-import userRouter from './routes/user.routes.js'
-import listRouter from './routes/list.routes.js'
-import taskRouter from './routes/task.routes.js'
+import userRouter from './src/routes/user.routes.js'
+import listRouter from './src/routes/list.routes.js'
+import taskRouter from './src/routes/task.routes.js'
 
 app.get('/',(req,res)=>{
     res.json('hello')
