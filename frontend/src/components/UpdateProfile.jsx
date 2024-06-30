@@ -60,6 +60,7 @@ const UpdateProfile = () => {
     const { avatar } = details;
     const formData = new FormData();
     formData.append("avatar", avatar);
+    console.log(avatar)
     try {
       const updated = await axios.patch("/users/avatar", formData, {
         withCredentials: true,
