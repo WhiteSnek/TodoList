@@ -8,6 +8,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import axios from 'axios'
 
 axios.defaults.baseURL = import.meta.env.VITE_SERVER;
+console.log(import.meta.env.VITE_SERVER)
 
 const Layout = () => {
   const router = createBrowserRouter(
